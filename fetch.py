@@ -27,39 +27,13 @@ date_since = "2018-11-16"
 new_search = search_words + " -filter:retweets"
 item = 5
 
-
-# Collect tweets
 tweets = tw.Cursor(api.search,
               q=new_search,
               lang="en",
               since=date_since).items(item)
-              
 twe_dict = {}
 key = range(item)
-
-#values = [tweet.text]
 tweet_dict = [tweet.text for tweet in tweets]
 for i in key:
     twe_dict[i] = clean_tweet(tweet_dict[i])
 print(twe_dict)
-#print(twe_dict[1])
-
-
-# for users_loc in tweet_dict:
-# 	print(users_loc)
-
-''' Iterate and print tweets
-for tweet in tweets:
-    print(tweet.text)	
-
-print(tweet_dict)
-
-def remove_pattern(text, pattern_regex):
-    r = re.findall(pattern_regex, text)
-    for i in r:
-        text = re.sub(i, '', text)
-    
-    return text
-# We are keeping cleaned tweets in a new column called 'tidy_tweets'
-tweets_df['tidy_tweets'] = np.vectorize(remove_pattern)(tweets_df['tweets'], "@[\w]*: | *RT*")
-'''
