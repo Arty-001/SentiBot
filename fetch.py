@@ -1,9 +1,15 @@
 import os
 import re
 import numpy as np
-
 import tweepy as tw
 from requests_oauthlib import OAuth1Session
+
+def clean_tweet(tweet): 
+        ''' 
+        Utility function to clean tweet text by removing links, special characters 
+        using simple regex statements. 
+        '''
+        return ' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)", " ", tweet).split())
 
 consumer_key = "ydKKAoXFmqq97PZWYPs4wfy5S"
 consumer_secret = "G1tFaa0Gop0kGCYsZzUpx1RLYjvIFv8qwS9H5dreZkgqlfCEnR"
@@ -15,7 +21,7 @@ auth.set_access_token(access_token, access_token_secret)
 api = tw.API(auth)
 
 
-search_words = "Jack_Septic_Eye"
+search_words = "elon musk"
 date_since = "2018-11-16"
 
 new_search = search_words + " -filter:retweets"
@@ -28,14 +34,13 @@ tweets = tw.Cursor(api.search,
               lang="en",
               since=date_since).items(item)
               
-              
 twe_dict = {}
 key = range(item)
 
 #values = [tweet.text]
 tweet_dict = [tweet.text for tweet in tweets]
 for i in key:
-    twe_dict[i] = tweet_dict[i]
+    twe_dict[i] = clean_tweet(tweet_dict[i])
 print(twe_dict)
 #print(twe_dict[1])
 
