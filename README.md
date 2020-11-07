@@ -13,6 +13,6 @@ Phases:
       - libraries planned to be used: csv
   5. Plot graphs 
       - libraries planned to be used: matplotlib
-  6. Building UI 
+  6. Building UI
       - libraries planned to be used: tkinter
   7. Present the data.
