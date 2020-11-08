@@ -115,6 +115,5 @@ Feel free to make issues and send PRs
 ### The team split:
 ##### Back end:
 [@insaiyancvk](https://github.com/insaiyancvk) [@RudCodera8](https://github.com/RudCodera8)
-
 #### Front end:
 [@vyshnavp6423355](https://github.com/vyshnavp6423355) [@Arty-001](https://github.com/Arty-001) [@DeadlyBlessing](https://github.com/DeadlyBlessing)
