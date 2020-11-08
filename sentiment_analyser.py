@@ -49,4 +49,4 @@ def main(text):
     sa = SentimentAnalysis()
     sa.DownloadData()
 
-main("Arnab Goswami")
+# main("Arnab Goswami")

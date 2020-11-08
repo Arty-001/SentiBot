@@ -1,0 +1,10 @@
+csv
+json
+geopy
+tweepy
+re
+textblob
+PyQt5
+matplotlib
+PyQtgraph
+numpy
