@@ -1,4 +1,4 @@
-# SentiBot
+# Tech-Tech-Toe '20
 --------------------Description----------------------- 
 
 Senti bot is a python and pyqt5 based GUI application which helps a user to analyse the sentiments for a particular keyword entered. The user can either analyse the latest tweets updated and can also set the region for analysing.

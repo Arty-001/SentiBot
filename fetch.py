@@ -68,5 +68,4 @@ def json_maker(text):
         twe_dict[i] = tweet_dict[i]
     with open("tweet.json", "w") as outfile: 
         json.dump(twe_dict, outfile) 
-    
     print("Json file created")
