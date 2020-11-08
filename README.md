@@ -10,7 +10,7 @@ Senti bot is a python and pyqt5 based GUI application which helps a user to anal
 Nowaday we see hate factors growing among people using social media, to curb that if you want your content to be filtered as per your choice, the SentiBot
 helps you. Even we can have a look at what other people think about a particular product which you are planning to consume. For eg : If you want to be a customer of any edtech company, you can have a look at the opinions others are having about the product. Also if you want to sell your product you can get to know the scope of your product according to region. 
 
-Prerequisites 
+-------Prerequisites-----------
 1) python 3.x 
 2) numpy
 3) PyQt5
