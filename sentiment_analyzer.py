@@ -47,7 +47,7 @@ class SentimentAnalysis:
         # print(positive_tweets)
         # print("\n\n Negative tweets")
         # print(negative_tweets)
-        with open(r"timeByTime.csv",'w',encoding="utf-8") as file:
+        with open(r"timeByTime.csv",'w',encoding="utf-8",newline='') as file:
             writer = csv.writer(file)
             t = range(1,101)
             writer.writerow(t)
