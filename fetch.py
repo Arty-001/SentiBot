@@ -1,9 +1,13 @@
-import sys
-import re
-import tweepy as tw
-import csv
-import json
-from geopy.geocoders import Nominatim
+try:
+    import sys
+    import re
+    import tweepy as tw
+    import csv
+    import json
+    from geopy.geocoders import Nominatim
+except Exception as e:
+    print("Some modules were not found :( {}".format(e))
+    quit()
 
 def divider(text):
     check = re.search(";",text)
@@ -64,6 +68,6 @@ def json_maker(text):
     tweet_dict = [tweet.full_text for tweet in tweets]
     for i in key:
         twe_dict[i] = tweet_dict[i]
-    with open("tweet.json", "w") as outfile: 
+    with open("data/tweet.json", "w") as outfile: 
         json.dump(twe_dict, outfile) 
     print("Json file created")

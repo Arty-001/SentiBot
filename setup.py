@@ -1,22 +1,25 @@
-#import required libraries
-from PyQt5 import QtCore, QtGui, QtWidgets
-from pyqtgraph import PlotWidget
-import csv
-import os
-
-# importing functions from other files
-from sentiment_analyser import main
-from time_graph import time_graph
+try:
+    #import required libraries
+    from PyQt5 import QtCore, QtGui, QtWidgets
+    from pyqtgraph import PlotWidget
+    import csv
+    import os
+    # importing functions from other files
+    import sentiment_analyser
+    import time_graph
+except Exception as e:
+    print("Some modules were not found :( {}".format(e))
+    quit()
 
 class Ui_MainWindow(object):
     def Display_Tweets(self):
         print("Positive Tweets----------------------------------------------------------\n\n")
-        readtweets = open("positiveTweets.csv", "r",encoding="utf-8")
+        readtweets = open("data/positiveTweets.csv", "r",encoding="utf-8")
         tweetlist = readtweets.readlines()
         for x in tweetlist:
             print(x, end="")
         print("- "*40)
-        readtweets2 = open("negativeTweets.csv", "r",encoding="utf-8")
+        readtweets2 = open("data/negativeTweets.csv", "r",encoding="utf-8")
         tweetlist2 = readtweets2.readlines()
         print("Negative Tweets-------------------------------------------------------------\n\n")
         for y in tweetlist2:
@@ -25,11 +28,11 @@ class Ui_MainWindow(object):
         readtweets2.close()
 
     def graphs(self):
-        time_graph()
+        time_graph.time_graph()
 
     def senti_analysis(self):
         a = self.Keyword_box.text()
-        main(a)
+        sentiment_analyser.main(a)
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")

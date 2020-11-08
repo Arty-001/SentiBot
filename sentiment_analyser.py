@@ -1,10 +1,13 @@
-#import required libraries
-import json
-import tweepy,csv,re
-from textblob import TextBlob
-#import functions from other fetch file
-from fetch import json_maker
-
+try:
+    #import required libraries
+    import json
+    import tweepy,csv,re
+    from textblob import TextBlob
+    #import functions from other fetch file
+    import fetch
+except Exception as e:
+    print("Some modules were not found :( {}".format(e))
+    quit()
 class SentimentAnalysis:
 
     def __init__(self):
@@ -16,7 +19,7 @@ class SentimentAnalysis:
         positive_tweets = []
         negative_tweets = []
 
-        f = open("tweet.json")
+        f = open("data/tweet.json")
         data = json.load(f)
         p,n = 0,0
         for i in range(100):
@@ -34,13 +37,13 @@ class SentimentAnalysis:
                 polarities.append(analysis.sentiment.polarity)
                 n+=1
         try:
-            with open(r"timeByTime.csv",'w',encoding="utf-8",newline='') as file:
+            with open(r"data/timeByTime.csv",'w',encoding="utf-8",newline='') as file:
                 writer = csv.writer(file)
                 writer.writerows(map(lambda x: [x],polarities))
-            with open(r"positiveTweets.csv",'w',encoding="utf-8") as file:
+            with open(r"data/positiveTweets.csv",'w',encoding="utf-8") as file:
                 writer = csv.writer(file)
                 writer.writerow(positive_tweets)
-            with open(r"negativeTweets.csv",'w',encoding="utf-8") as file:
+            with open(r"data/negativeTweets.csv",'w',encoding="utf-8") as file:
                 writer = csv.writer(file)
                 writer.writerow(negative_tweets)
             print("Data saved for analysis")
@@ -49,6 +52,6 @@ class SentimentAnalysis:
             print(e)
 
 def main(text):
-    json_maker(text)
+    fetch.json_maker(text)
     sa = SentimentAnalysis()
     sa.DownloadData()

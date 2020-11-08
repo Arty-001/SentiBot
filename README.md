@@ -1,5 +1,5 @@
 <div align="center"><H1> Tic-Tech-Toe'20 </H1>
-<H2> Team weebDevs presents you the <I>SentiBot </I> <img src="botLogo.png"> </H2></div> 
+<H2> Team weebDevs presents you the <I>SentiBot </I> <img src="screenshots/botLogo.png"> </H2></div> 
 
 
 ### *Description*: :newspaper:

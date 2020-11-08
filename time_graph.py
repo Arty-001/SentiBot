@@ -1,10 +1,14 @@
-import matplotlib.pyplot as plt
-import csv
+try:
+    import matplotlib.pyplot as plt
+    import csv
+except Exception as e:
+    print("Some modules were not found :( {}".format(e))
+    quit()
 
 def time_graph():
     x= range(1,101)
     y=[]
-    with open('timeByTime.csv', 'r') as csvfile:
+    with open('data/timeByTime.csv', 'r') as csvfile:
         plots= csv.reader(csvfile, delimiter=',')
         for row in plots:
             y.append(float(row[0]))
