@@ -2,15 +2,15 @@
 ## Team weebDevs presents you SentiBot ![](botLogo.png)
 
 ### *Description*: 
-<p>
+
 Senti bot is a python and pyqt5 based GUI application which helps a user to analyse the sentiments for a particular keyword entered. The user can either analyse the latest tweets updated and can also set the region (beta) for analysing.
-</p>
+
 ---
 ### *Problem it solves*: 
-<p>
+
 Nowadays we see hate factors growing among people using social media, to curb that if you want your content to be filtered as per your choice, the SentiBot
 helps you. Even we can have a look at what other people think about a particular product which you are planning to consume. For eg : If you want to be a customer of any edtech company, you can have a look at the opinions others are having about the product. Also if you want to sell your product you can get to know the scope of your product according to region. 
-</p>
+
 ---
 ### *Prerequisites*:
 - ```Python 3.x ```
@@ -19,7 +19,7 @@ helps you. Even we can have a look at what other people think about a particular
 - ```Tweepy```
 - ```GeoPy```
 
-### *Tools used*:
+### *Other tools used*:
 - ```Python-CSV```
 - ```JSON```
 - ```TextBlob```
