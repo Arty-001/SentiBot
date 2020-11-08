@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>1000</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Microsoft YaHei UI Light</family>
+    <pointsize>16</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../Simple_PySide_Base/icons/16x16/cil-magnifying-glass.png</normaloff>../Simple_PySide_Base/icons/16x16/cil-magnifying-glass.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(22, 22, 37);
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>60</y>
+      <width>241</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLineEdit" name="Keyword_box">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>240</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>240</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>240</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit
+{
+	border: 2px solid rgb(48, 48, 81);
+	border-radius:20px;
+	color :#FFF;
+	padding-left: 68px;
+	padding-right: 20px;
+	background-color: rgb(30, 30, 48);
+}
+QLineEdit:hover{
+	border: 2px solid rgb(138, 102, 64);
+}
+QLineEdit:focus{
+	border:2px solid rgb(85, 150, 270);
+	background-color: rgb(43, 45, 56);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>Keyword</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>190</y>
+      <width>121</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>121</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	border-color: rgb(85, 0, 0);
+	background-color:rgb(22, 22, 37);
+	border:none;
+	border-radius:20px;
+	color: rgb(108,117,125);
+
+}
+QPushButton:hover{
+	background-color:rgb(40,41,58);
+	border:none;
+	color:rgb(108,117,125);
+}
+QPushButton:pressed{
+
+	color:rgb(76,117,242);
+	background-color:rgb(30,30,48);
+}</string>
+     </property>
+     <property name="text">
+      <string>Top +ve/-ve </string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>280</y>
+      <width>591</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius:20px;
+background-color=rgb(255, 255, 255);</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_3">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>190</y>
+      <width>121</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>121</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	border-color: rgb(85, 0, 0);
+	background-color:rgb(22, 22, 37);
+	border:none;
+	border-radius:20px;
+	color: rgb(108,117,125);
+
+}
+QPushButton:hover{
+	background-color:rgb(40,41,58);
+	border:none;
+	color:rgb(108,117,125);
+}
+QPushButton:pressed{
+
+	color:rgb(76,117,242);
+	background-color:rgb(30,30,48);
+}</string>
+     </property>
+     <property name="text">
+      <string>Region</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_4">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>190</y>
+      <width>121</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>121</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	border-color: rgb(85, 0, 0);
+	background-color:rgb(22, 22, 37);
+	border:none;
+	border-radius:20px;
+	color: rgb(108,117,125);
+
+}
+QPushButton:hover{
+	background-color:rgb(40,41,58);
+	border:none;
+	color:rgb(108,117,125);
+}
+QPushButton:pressed{
+
+	color:rgb(76,117,242);
+	background-color:rgb(30,30,48);
+}</string>
+     </property>
+     <property name="text">
+      <string>Age</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="Search_button">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>140</y>
+      <width>170</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft JhengHei UI</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border-color: rgb(85, 0, 0);
+	background-color:rgb(55, 94, 115);
+	border:rgb(32, 32, 47);
+	border-radius:20px;
+	color: rgb(255, 255, 255);
+	border-left:3px solid rgb(130, 65, 0);
+	border-right:3px solid rgb(130, 65, 0);
+	border-bottom:3px solid rgb(130, 65, 0);
+	border-top:3px solid rgb(130, 65, 0);
+}
+QPushButton:hover{
+	background-color:rgb(138, 79, 149);
+	border:rgb(19, 73, 106);
+	border-left:1px solid rgb(30, 30, 48);
+	border-right:1px solid rgb(30, 30, 48);
+	border-bottom:1px solid rgb(30, 30, 48);
+}
+
+QPushButton:pressed{
+	background-color:rgb(99, 37, 242);
+	border-left:1px solid rgb(30, 30, 48);
+	border-right:1px solid rgb(30, 30, 48);
+	border-bottom:none;
+}</string>
+    </property>
+    <property name="text">
+     <string>Search</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../Simple_PySide_Base/icons/16x16/cil-magnifying-glass.png</normaloff>
+      <selectedoff>../Simple_PySide_Base/icons/16x16/cil-reload.png</selectedoff>
+      <selectedon>../Simple_PySide_Base/icons/16x16/cil-magnifying-glass.png</selectedon>../Simple_PySide_Base/icons/16x16/cil-magnifying-glass.png</iconset>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_5">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>720</y>
+      <width>121</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>121</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	border-color: rgb(85, 0, 0);
+	background-color:rgb(22, 22, 37);
+	border:none;
+	border-radius:20px;
+	color: rgb(108,117,125);
+
+}
+QPushButton:hover{
+	background-color:rgb(40,41,58);
+	border:none;
+	color:rgb(108,117,125);
+}
+QPushButton:pressed{
+
+	color:rgb(76,117,242);
+	background-color:rgb(30,30,48);
+}</string>
+     </property>
+     <property name="text">
+      <string>Clear</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>900</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
