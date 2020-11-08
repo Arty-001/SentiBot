@@ -66,7 +66,7 @@ helps you. Even we can have a look at what other people think about a particular
 
 ![](screenshots/graph.png)
 
-> Note: -1 indicates most negative tweet and +1 indicates most positive tweet
+> Note: +1 indicates most positive tweet and -1 indicates most negative tweet
 
 ---
 
