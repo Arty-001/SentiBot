@@ -1,8 +1,8 @@
+import sys
 import os
 import re
-import numpy as np
 import tweepy as tw
-from requests_oauthlib import OAuth1Session
+# from requests_oauthlib import OAuth1Session
 import csv
 import json
 from geopy.geocoders import Nominatim
@@ -34,14 +34,18 @@ def get_auth():
 
     auth = tw.OAuthHandler(consumer_key, consumer_secret, callback=None)
     auth.set_access_token(access_token, access_token_secret)
-    api = tw.API(auth)
-    return api
+    try:
+        api = tw.API(auth)
+        print("Authentication successful")
+        return api
+    except Exception as e:
+        print("Authentication failed")
+        print(e)
+        sys.exit()
+
 
 def json_maker(text):
-
     api = get_auth()
-
-    text = 'arnab goswami'
     search_words,region = divider(text)
     date_since = "2018-11-16"
 
@@ -53,8 +57,19 @@ def json_maker(text):
                 lang="en",
                 geocode=coordinates,
                 since=date_since).items(item)
+    
+    twe_dict = {}
+    key = range(item)
 
-    tweet_dict = [tweet.full_text for tweet in tweets]
-    with open("tweet.json", "w") as outfile:
-     	json.dump(tweet_dict, outfile)
-json_maker("Arnab goswami")
+    #values = [tweet.text]
+    tweet_dict = [[tweet.full_text] for tweet in tweets]
+    for i in key:
+        twe_dict[i] = tweet_dict[i]
+    #print(twe_dict)
+
+
+    #print(json.dumps(twe_dict, indent = 4 ))
+    with open("tweet.json", "w") as outfile: 
+        json.dump(twe_dict, outfile) 
+    
+    print("Json file created")
