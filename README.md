@@ -71,6 +71,7 @@ helps you. Even we can have a look at what other people think about a particular
 ---
 
 ### *Installation Guide*: :wrench:
+
 #### For Linux/Windows:
 
 1. Download Python
@@ -81,7 +82,10 @@ helps you. Even we can have a look at what other people think about a particular
     sudo apt-get update
     sudo apt-get install python3.8 python3-pip      
    ```
- 
+> In case you don't have git installed, you can download from [here](https://git-scm.com/downloads)
+
+> Run the following commands in __git bash__ or __cmd__ if you're on Windows. And Terminal if you're on Linux.
+
 2. Clone the repo:
 
 ```git clone https://github.com/insaiyancvk/SentiBot ```
