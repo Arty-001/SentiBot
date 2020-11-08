@@ -46,7 +46,7 @@ Please check the screenshot named 1,2,3,4 jpeg files for the GUI references .
 -------- Installation Guide ---------------
 
 1) run the following command in git-bash or terminal: "git clone https://github.com/insaiyancvk/SentiBot"
-2) next run the following command
+2) next run the following command "cd Sentibot"
 3) pip install -r requirements.txt
 4) python3 setup.py 
 
