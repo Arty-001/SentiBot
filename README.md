@@ -53,7 +53,7 @@ helps you. Even we can have a look at what other people think about a particular
 
 #### Here are a few screenshots of the GUI:
 
-##### The UI :Computer:
+##### The UI :computer:
 ![](screenshots/UI_resized.png)
 
 #### When Top tweets is selected
