@@ -1,5 +1,5 @@
-# Tic-Tech-Toe'20
-## Team weebDevs presents you SentiBot ![](botLogo.png)
+<div align="center"><H1> Tic-Tech-Toe'20 </H1>
+<H2> Team weebDevs presents you the <I>SentiBot </I> <img src="botLogo.png"> </H2></div> 
 
 ### *Description*: 
 
@@ -49,7 +49,7 @@ helps you. Even we can have a look at what other people think about a particular
 
 #### When Top tweets is selected
 
-![](screenshots/searchUI.png)
+![](screenshots/searchUI_resized.png)
 
 ![](screenshots/topTweets.png)
 
@@ -57,6 +57,7 @@ helps you. Even we can have a look at what other people think about a particular
 
 ![](screenshots/graph.png)
 
+> Note: -1 indicates most negative tweet and +1 indicates most positive tweet
 ---
 ### *Installation Guide*:
 
