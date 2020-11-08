@@ -31,7 +31,7 @@ class Ui_MainWindow(object):
         readtweets2.close()
 
     def graphs(self):
-        os.system("python3 time_graphs.py")
+        os.system("python3 time_graph.py")
 
     def senti_analysis(self):
         a = self.Keyword_box.text()
