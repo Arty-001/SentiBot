@@ -22,12 +22,12 @@ class Ui_MainWindow(object):
         readtweets = open("positiveTweets.csv", "r")
         tweetlist = readtweets.readlines()
         for x in tweetlist:
-            print(x)
+            print(x, "\n")
         readtweets2 = open("negativeTweets.csv", "r")
         tweetlist2 = readtweets2.readlines()
         print("negative Tweets-------------------------------------------------------------\n\n")
         for y in tweetlist2:
-            print(y)
+            print(y, "\n")
         readtweets2.close()
 
     def graphs(self):
