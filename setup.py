@@ -1,19 +1,12 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'analyser.ui'
-#
-# Created by: PyQt5 UI code generator 5.14.1
-#
-# WARNING! All changes made in this file will be lost!
-
-from time_graph import *
+#import required libraries
 from PyQt5 import QtCore, QtGui, QtWidgets
 from pyqtgraph import PlotWidget
 import csv
 import os
-import matplotlib.pyplot as plt
-import csv
-import sentiment_analyser 
+
+# importing functions from other files
+from sentiment_analyser import main
+from time_graph import time_graph
 
 class Ui_MainWindow(object):
     def Display_Tweets(self):
@@ -36,7 +29,7 @@ class Ui_MainWindow(object):
 
     def senti_analysis(self):
         a = self.Keyword_box.text()
-        sentiment_analyser.main(a)
+        main(a)
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")

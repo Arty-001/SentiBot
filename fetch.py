@@ -1,8 +1,6 @@
 import sys
-import os
 import re
 import tweepy as tw
-# from requests_oauthlib import OAuth1Session
 import csv
 import json
 from geopy.geocoders import Nominatim

@@ -1,7 +1,9 @@
-from fetch import *
+#import required libraries
 import json
 import tweepy,csv,re
 from textblob import TextBlob
+#import functions from other fetch file
+from fetch import json_maker
 
 class SentimentAnalysis:
 

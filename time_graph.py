@@ -1,11 +1,9 @@
 import matplotlib.pyplot as plt
-import numpy as np
 import csv
 
 def time_graph():
     x= range(1,101)
     y=[]
-
     with open('timeByTime.csv', 'r') as csvfile:
         plots= csv.reader(csvfile, delimiter=',')
         for row in plots:
