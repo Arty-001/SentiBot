@@ -110,6 +110,8 @@ helps you. Even we can have a look at what other people think about a particular
 
 Feel free to make issues and send PRs
 
+---
+
 ### The team split:
 ##### Back end:
 [@insaiyancvk](https://github.com/insaiyancvk) [@RudCodera8](https://github.com/RudCodera8)
