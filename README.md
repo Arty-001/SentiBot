@@ -36,10 +36,11 @@ We tried to scrape and fetch data from Twitter using APIs , for which we had  to
 intially we had some issues during the coding phase. Since our team is new to this hackathon concept, the UI team had to face some problems during the course of developing.
 
 
+-------User Interface ----------
 
-
-
-
+User should enter the keyword; location to get tweets particular to keyword and the tweets in and around the location entered. So the user will get the sentimental 
+analysis and the graph related to the positive and negative measurements.Also user will get the top 10 positive and negative tweets in the terminal (which in the future we will turn it on for the GUI app itself).
+Please check the screenshot named 1,2,3,4 jpeg files for the GUI references . 
 
 
 
