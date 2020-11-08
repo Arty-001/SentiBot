@@ -3,39 +3,58 @@ import re
 import numpy as np
 import tweepy as tw
 from requests_oauthlib import OAuth1Session
+import csv
 import json
+from geopy.geocoders import Nominatim
 
-def clean_tweet(tweet): 
-        return ' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)", " ", tweet).split())
+def divider(text):
+    check = re.search(";",text)
+    if check:
+        x = text.split(";")
+        keyword = x[0]
+        location= x[1]
+    else:
+        keyword=text
+        location=''
+    return keyword, location
 
-consumer_key = "ydKKAoXFmqq97PZWYPs4wfy5S"
-consumer_secret = "G1tFaa0Gop0kGCYsZzUpx1RLYjvIFv8qwS9H5dreZkgqlfCEnR"
-access_token = "856759533640622080-HhlrgshaitB8gR2TXvrBq60XtNeRnXP"
-access_token_secret = "8GYPov3JIJAJD8o2PvkGtdrXwUy5HewqEOXeTdAwKZP5Q"
+def get_coordinates(region):
+    if region!='':
+        geolocator = Nominatim(user_agent="SentiBot")
+        location = geolocator.geocode(region)
+        return location.longitude, location.latitude
+    else:
+        return ''
 
-auth = tw.OAuthHandler(consumer_key, consumer_secret, callback=None)
-auth.set_access_token(access_token, access_token_secret)
-api = tw.API(auth)
+def get_auth():
+    consumer_key = "ydKKAoXFmqq97PZWYPs4wfy5S"
+    consumer_secret = "G1tFaa0Gop0kGCYsZzUpx1RLYjvIFv8qwS9H5dreZkgqlfCEnR"
+    access_token = "856759533640622080-HhlrgshaitB8gR2TXvrBq60XtNeRnXP"
+    access_token_secret = "8GYPov3JIJAJD8o2PvkGtdrXwUy5HewqEOXeTdAwKZP5Q"
 
-search_words = "us elections"
-date_since = "2018-11-16"
+    auth = tw.OAuthHandler(consumer_key, consumer_secret, callback=None)
+    auth.set_access_token(access_token, access_token_secret)
+    api = tw.API(auth)
+    return api
 
-new_search = search_words + " -filter:retweets"
-item = 5
+def json_maker(text):
 
-# Collect tweets
-tweets = tw.Cursor(api.search,
-              q=new_search, tweet_mode = 'extended',
-              lang="en",
-              since=date_since).items(item)
-              
-twe_dict = {}
-key = range(item)
+    api = get_auth()
 
-#values = [tweet.text]
-tweet_dict = [tweet.full_text for tweet in tweets]
-for i in key:
-    twe_dict[i] = clean_tweet(tweet_dict[i])
+    text = 'arnab goswami'
+    search_words,region = divider(text)
+    date_since = "2018-11-16"
 
-with open("sample.json", "w") as outfile: 
-    json.dump(twe_dict, outfile) 
+    new_search = search_words + " -filter:retweets"
+    item = 100
+    coordinates = get_coordinates(region)
+    tweets = tw.Cursor(api.search,
+                q=new_search, tweet_mode = 'extended',
+                lang="en",
+                geocode=coordinates,
+                since=date_since).items(item)
+
+    tweet_dict = [tweet.full_text for tweet in tweets]
+    with open("tweet.json", "w") as outfile:
+     	json.dump(tweet_dict, outfile)
+json_maker("Arnab goswami")
