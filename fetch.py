@@ -35,7 +35,7 @@ key = range(item)
 #values = [tweet.text]
 tweet_dict = [tweet.full_text for tweet in tweets]
 for i in key:
-    twe_dict[i] = tweet_dict[i],tweet.user.location
+    twe_dict[i] = clean_tweet(tweet_dict[i])
 
 with open("sample.json", "w") as outfile: 
     json.dump(twe_dict, outfile) 

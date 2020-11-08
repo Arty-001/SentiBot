@@ -33,7 +33,7 @@ class SentimentAnalysis:
             analysis = TextBlob(data[str(i)])
             #polarity += analysis.sentiment.polarity  # adding up polarities to find the average later
             
-            if (analysis.sentiment.polarity > 0):
+            if (analysis.sentiment.polarity >= 0):
                 if p<10:
                     positive_tweets.append(data[str(i)])
                 polarities.append(1)
@@ -49,6 +49,8 @@ class SentimentAnalysis:
         # print(negative_tweets)
         with open(r"timeByTime.csv",'w',encoding="utf-8") as file:
             writer = csv.writer(file)
+            t = range(1,101)
+            writer.writerow(t)
             writer.writerow(polarities)
         with open(r"positiveTweets.csv",'w',encoding="utf-8") as file:
             writer = csv.writer(file)
@@ -56,7 +58,7 @@ class SentimentAnalysis:
         with open(r"negativeTweets.csv",'w',encoding="utf-8") as file:
             writer = csv.writer(file)
             writer.writerow(negative_tweets)
-
+        print(len(polarities))
         # print(self.tweetText, polarities)
         
         # with open("TopTweets.csv",'w',newline='') as file:
