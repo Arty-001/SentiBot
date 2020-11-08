@@ -43,6 +43,8 @@ helps you. Even we can have a look at what other people think about a particular
 2. So the user will get the sentimental analysis and the graph related to the positive and negative measurements.
 3. Also user will get the top 10 positive and negative tweets in the terminal (which in the future we will turn it on for the GUI app itself).
 #### Here are a few screenshots of the GUI:
+##### The UI 
+![](screenshots/UI.png)
 
 ---
 ### *Installation Guide*:
