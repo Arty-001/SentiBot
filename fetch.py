@@ -63,17 +63,10 @@ def json_maker(text):
                 since=date_since).items(item)
     twe_dict = {}
     key = range(100)
-    #values = [tweet.text]
     tweet_dict = [tweet.full_text for tweet in tweets]
-    # print(tweet_dict)
     for i in key:
-        # print(i)
         twe_dict[i] = tweet_dict[i]
-    # print(twe_dict)
-
-    #print(json.dumps(twe_dict, indent = 4 ))
     with open("tweet.json", "w") as outfile: 
         json.dump(twe_dict, outfile) 
     
     print("Json file created")
-# json_maker("Arnab")

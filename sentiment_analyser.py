@@ -50,5 +50,3 @@ def main(text):
     json_maker(text)
     sa = SentimentAnalysis()
     sa.DownloadData()
-
-# main("Arnab Goswami")
