@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import numpy as np
 import csv
 
 def time_graph():
@@ -9,14 +10,10 @@ def time_graph():
         plots= csv.reader(csvfile, delimiter=',')
         for row in plots:
             y.append(float(row[0]))
-
-
-    plt.plot(x,y, marker='o')
-
-    plt.title('Time-by-time analysis')
-
-    plt.xlabel('Time commenting')
-    plt.ylabel('Sentiment')
-
+    plt.style.use('dark_background')
+    fig, ax = plt.subplots()
+    ax.plot(x,y, marker='o')
+    ax.set_xlabel('Tweet time')
+    ax.set_ylabel('Sentiment')
+    ax.set_title("Sentiment analysis")
     plt.show()
-
