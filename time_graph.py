@@ -12,10 +12,10 @@ with open('timeByTime.csv', 'r') as csvfile:
 
 plt.plot(x,y, marker='o')
 
-plt.title('Data from the CSV File: People and Expenses')
+plt.title('Time-by-time analysis')
 
-plt.xlabel('Number of People')
-plt.ylabel('Expenses')
+plt.xlabel('Time committing')
+plt.ylabel('Sentiment')
 
 plt.show()
 
