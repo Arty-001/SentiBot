@@ -21,12 +21,12 @@ class SentimentAnalysis:
             analysis = TextBlob(data[str(i)])
             if (analysis.sentiment.polarity >= 0):
                 if p<10:
-                    positive_tweets.append(data(str(i)))
+                    positive_tweets.append(data[str(i)])
                 polarities.append(1)
                 p+=1
             elif (analysis.sentiment.polarity < 0):
                 if n<10:
-                    negative_tweets.append(data(str(i)))
+                    negative_tweets.append(data[str(i)])
                 polarities.append(0)
                 n+=1
         try:
@@ -49,4 +49,4 @@ def main(text):
     sa = SentimentAnalysis()
     sa.DownloadData()
 
-main("Arnab Goswami; Bangalore")
+main("Arnab Goswami")

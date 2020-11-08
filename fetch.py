@@ -51,25 +51,29 @@ def json_maker(text):
 
     new_search = search_words + " -filter:retweets"
     item = 100
-    coordinates = get_coordinates(region)
+    if region!='':
+        longi, lati = get_coordinates(region)
+        coordinates=str(longi)+","+str(lati)+",500mi"
+    else:
+        coordinates=''
     tweets = tw.Cursor(api.search,
                 q=new_search, tweet_mode = 'extended',
                 lang="en",
                 geocode=coordinates,
                 since=date_since).items(item)
-    
     twe_dict = {}
-    key = range(item)
-
+    key = range(100)
     #values = [tweet.text]
-    tweet_dict = [[tweet.full_text] for tweet in tweets]
+    tweet_dict = [tweet.full_text for tweet in tweets]
+    # print(tweet_dict)
     for i in key:
+        # print(i)
         twe_dict[i] = tweet_dict[i]
-    #print(twe_dict)
-
+    # print(twe_dict)
 
     #print(json.dumps(twe_dict, indent = 4 ))
     with open("tweet.json", "w") as outfile: 
         json.dump(twe_dict, outfile) 
     
     print("Json file created")
+# json_maker("Arnab")
