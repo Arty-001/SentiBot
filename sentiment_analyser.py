@@ -19,15 +19,17 @@ class SentimentAnalysis:
         p,n = 0,0
         for i in range(100):
             analysis = TextBlob(data[str(i)])
-            if (analysis.sentiment.polarity >= 0):
+            if (analysis.sentiment.polarity > 0):
                 if p<10:
                     positive_tweets.append(data[str(i)])
-                polarities.append(1)
+                polarities.append(analysis.sentiment.polarity)
                 p+=1
+            elif analysis.sentiment.polarity ==0:
+                polarities.append(analysis.sentiment.polarity)
             elif (analysis.sentiment.polarity < 0):
                 if n<10:
                     negative_tweets.append(data[str(i)])
-                polarities.append(0)
+                polarities.append(analysis.sentiment.polarity)
                 n+=1
         try:
             with open(r"timeByTime.csv",'w',encoding="utf-8",newline='') as file:

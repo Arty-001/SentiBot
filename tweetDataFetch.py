@@ -26,7 +26,7 @@ def json_maker(text):
     new_search = search_words + " -filter:retweets"
     item = 100
 
-    coordinates = ''
+    coordinates = '77.545,57.487,500mi'
     # Collect tweets
     tweets = tw.Cursor(api.search,
                 q=new_search, tweet_mode = 'extended',

@@ -6,7 +6,7 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-
+from time_graph import *
 from PyQt5 import QtCore, QtGui, QtWidgets
 from pyqtgraph import PlotWidget
 import csv
@@ -19,11 +19,11 @@ import sentiment_analyser
 class Ui_MainWindow(object):
     def Display_Tweets(self):
         print("Positive Tweets----------------------------------------------------------\n\n")
-        readtweets = open("positiveTweets.csv", "r")
+        readtweets = open("positiveTweets.csv", "r",encoding="utf-8")
         tweetlist = readtweets.readlines()
         for x in tweetlist:
             print(x, "\n")
-        readtweets2 = open("negativeTweets.csv", "r")
+        readtweets2 = open("negativeTweets.csv", "r",encoding="utf-8")
         tweetlist2 = readtweets2.readlines()
         print("negative Tweets-------------------------------------------------------------\n\n")
         for y in tweetlist2:
@@ -31,7 +31,7 @@ class Ui_MainWindow(object):
         readtweets2.close()
 
     def graphs(self):
-        os.system("python3 time_graph.py")
+        time_graph()
 
     def senti_analysis(self):
         a = self.Keyword_box.text()
