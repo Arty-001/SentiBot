@@ -99,3 +99,16 @@ helps you. Even we can have a look at what other people think about a particular
 ```python3 setup.py``` 
 
 > please note that the graph will be shown in a new window, and the top tweets will be printed on the terminal
+
+---
+
+### Contribution
+
+Feel free to make issues and send PRs
+
+### The team split:
+##### Back end:
+[@insaiyancvk](https://github.com/insaiyancvk) [@RudCodera8](https://github.com/RudCodera8)
+
+#### Front end:
+[@vyshnavp6423355](https://github.com/vyshnavp6423355) [@Arty-001](https://github.com/Arty-001) [@DeadlyBlessing](https://github.com/DeadlyBlessing)
