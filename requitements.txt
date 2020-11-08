@@ -1,5 +1,5 @@
 python-csv
-json
+jsonlib
 geopy
 tweepy
 re
