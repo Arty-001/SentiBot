@@ -15,19 +15,20 @@ import matplotlib.pyplot as plt
 import csv
 import sentiment_analyser 
 
-
 class Ui_MainWindow(object):
     def Display_Tweets(self):
         print("Positive Tweets----------------------------------------------------------\n\n")
         readtweets = open("positiveTweets.csv", "r",encoding="utf-8")
         tweetlist = readtweets.readlines()
         for x in tweetlist:
-            print(x, "\n")
+            print(x, end="")
+        print("- "*40)
         readtweets2 = open("negativeTweets.csv", "r",encoding="utf-8")
         tweetlist2 = readtweets2.readlines()
-        print("negative Tweets-------------------------------------------------------------\n\n")
+        print("Negative Tweets-------------------------------------------------------------\n\n")
         for y in tweetlist2:
-            print(y, "\n")
+            print(y, end="")
+        print("- "*40)
         readtweets2.close()
 
     def graphs(self):
@@ -36,7 +37,6 @@ class Ui_MainWindow(object):
     def senti_analysis(self):
         a = self.Keyword_box.text()
         sentiment_analyser.main(a)
-        
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
