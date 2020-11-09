@@ -4,7 +4,6 @@ geopy
 tweepy
 re
 textblob
-PyQt5
+pyqt5
 matplotlib
-PyQtgraph
-numpy
+pyqtgraph
